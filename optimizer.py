@@ -53,7 +53,7 @@ START_HOUR = 6
 def get_speed(city_idx, hour_idx):
     idx = hour_idx - START_HOUR
     if 0 <= idx < 12:
-        return speed_hourly_matrix[city_idx][idx]
+        return speed_hourly_matrix[city_idx, idx]
     return 90
 
 def compute_piecewise_travel_time(from_city, to_city, hour, minute, distance):
